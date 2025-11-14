@@ -4,8 +4,9 @@ html {
 
 @font-face {
   font-family: 'Star';
-  src: url('../assets/Starjedi.ttf') format('truetype');
+  src: url('../font/Starjedi.ttf') format('truetype');
 }
+
 body {
   margin: 0;
   background-color: #000;
@@ -13,6 +14,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* ================= INÍCIO ================= */
 
 .inicio {
   position: relative;
@@ -25,16 +27,9 @@ body {
   flex-direction: column;
 }
 
-
-
 @keyframes moveStars {
   from { background-position-y: 0; }
   to { background-position-y: -800px; }
-}
-
-.logo {
-  position: relative;
-  z-index: 1;
 }
 
 .logo img {
@@ -43,7 +38,7 @@ body {
   opacity: 1;
 }
 
-
+/* TEXTO INICIAL */
 .intro-text {
   position: absolute;
   bottom: 80px;
@@ -61,10 +56,8 @@ body {
 
 .intro-text p {
   font-size: 16px;
-  color: #fff;
   opacity: 0.8;
   font-family: 'Star';
-  
 }
 
 .intro-text button {
@@ -75,66 +68,176 @@ body {
   padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
   font-family: 'Star';
 }
 
 .intro-text button:hover {
   background: #ffe81f;
   color: black;
-  font-family: 'Star';
 }
 
+/* =============== SOBRE =============== */
 
 .sobre-starwars {
-  position: relative;
   width: 80%;
   max-width: 1000px;
   margin: 0 auto;
   padding: 80px 0;
   text-align: justify;
-  color: #f5f5f5;
   font-family: 'Star';
 }
 
 .sobre-starwars h2 {
-  font-family: 'Star';
   text-align: center;
   font-size: 40px;
   color: #ffe81f;
   letter-spacing: 2px;
   margin-bottom: 25px;
-  
 }
 
-.sobre-starwars h2 span {
-  color: #ffffff;
-  font-family: 'Star';
+.sobre-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 40px;
 }
 
+/* TEXTO SOBRE */
 .texto-sobre {
-  font-family: 'Inter', sans-serif;
+  width: 50%;
   color: #e8e8e8;
   line-height: 1.8;
+  font-family: 'Star';
   font-size: 15px;
+}
+
+/* SLIDER */
+#slider {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+/* ================= LINHA DO TEMPO ================= */
+
+.linha-tempo-horizontal {
+  width: 90%;
+  max-width: 1100px;
+  margin: 80px auto;
+  text-align: center;
   font-family: 'Star';
 }
- #slider {
-      width: 80%;
-    }
-    
-    .slide {
-      width: 80%;
-      display: none;
-      position: relative;
-    }
-    
-    .slide img {
-      width: 80%;
-      height: 80%;
-    }
-    
-    .slide.active {
-      display: block;
-    }
-  
+
+.linha-tempo-horizontal h2 {
+  font-size: 40px;
+  color: #ffe81f;
+  margin-bottom: 40px;
+}
+
+/* CONTAINER GERAL */
+.timeline-horizontal-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  padding: 30px 0;
+  overflow: hidden;
+}
+
+/* LINHA (INICIALMENTE APAGADA) */
+.timeline-horizontal-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  transform: translateY(-50%);
+  background-color: #ffe81f;
+  opacity: 0.2;
+  transition: opacity 1s ease;
+}
+
+/* ACENDE A LINHA */
+.timeline-horizontal-container.linha-acesa::before {
+  opacity: 1;
+  box-shadow: 0 0 12px #ffe81f;
+}
+
+/* ITEM */
+.timeline-horizontal-item {
+  width: 22%;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* BOLINHA */
+.timeline-dot {
+  width: 18px;
+  height: 18px;
+  background-color: #ffe81f;
+  border-radius: 50%;
+  margin: 0 auto 12px auto;
+  box-shadow: 0 0 12px #ffe81f;
+}
+
+/* IMAGEM */
+.timeline-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #ffe81f;
+  margin-bottom: 10px;
+}
+
+/* TEXTO */
+.timeline-horizontal-item h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.timeline-horizontal-item p {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #e8e8e8;
+  line-height: 1.6;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .timeline-horizontal-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .timeline-horizontal-container::before {
+    height: 100%;
+    width: 3px;
+    left: 50%;
+  }
+
+  .timeline-horizontal-item {
+    width: 100%;
+  }
+}
+
+

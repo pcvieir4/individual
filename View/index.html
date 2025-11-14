@@ -1,103 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Star Wars</title>
 
-  <link rel="stylesheet" href="../style/navbar.css">
-  <link rel="stylesheet" href="../style/home.css">
-  <link href="https://fonts.cdnfonts.com/css/star-jedi" rel="stylesheet">
+  <link rel="stylesheet" href="../style/navbar.css" />
+  <link rel="stylesheet" href="../style/home.css" />
+  <link href="https://fonts.cdnfonts.com/css/star-jedi" rel="stylesheet" />
 </head>
+
 <body>
+
   <!-- ===== NAVBAR ===== -->
   <header class="navbar">
     <div class="container_nav">
       <div id="logo_nav">
-        <a href="#inicio"><img src="../assets/starwars - Editado 1.svg" alt="Logo Star Wars" width="120"></a>
+        <a href="#inicio">
+          <img src="../assets/starwars - Editado 1.svg" alt="Logo Star Wars" width="120" />
+        </a>
       </div>
 
       <nav class="nav">
         <ul class="ul_nav">
           <li><a href="#inicio">Início</a></li>
           <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#linhaTempo">Minha história</a></li>
           <li><a href="#contato">Contato</a></li>
           <li><a href="calculadora.html">Calculadora</a></li>
         </ul>
 
         <ul class="bt_nav">
-          <li><button class="button" onclick="window.location.href='login.html'">Entrar</button></li>
+          <li>
+            <button class="button" onclick="window.location.href='login.html'">
+              Entrar
+            </button>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
- 
-   
+  <!-- ===== TELA INICIAL ===== -->
   <section class="inicio" id="inicio">
     <div id="stars"></div>
-    
-    
+
     <div class="logo">
-      
-      <img src="../assets/png-transparent-star-wars-hd-logo.png" alt="Star Wars Logo">
+      <img src="../assets/png-transparent-star-wars-hd-logo.png" alt="Star Wars Logo" />
     </div>
-    
 
     <div class="intro-text">
-      
       <h1>Bem-vindo ao Universo Star Wars</h1>
       <p>Explore uma galáxia muito, muito distante...</p>
-      <button onclick="scrollToSection('sobre')">Conheça mais </button>
+      <button onclick="scrollToSection('sobre')">Conheça mais</button>
     </div>
   </section>
 
-  
+  <!-- ===== SOBRE STAR WARS ===== -->
   <section class="sobre-starwars" id="sobre">
     <h2>Sobre <span>Star Wars</span></h2>
-    <div class="texto-sobre">
-      <p>
-        <strong>Star Wars</strong> é uma das sagas mais marcantes da história do cinema, criada por <strong>George Lucas</strong> em 1977.
-        Ambientada <em>“numa galáxia muito, muito distante”</em>, a franquia mistura ficção científica, fantasia e aventura em uma narrativa
-        sobre a luta entre o bem e o mal, representados pelos <strong>Jedi</strong> e pelos <strong>Sith</strong>. Ao longo dos filmes,
-        acompanhamos heróis e vilões lendários como <strong>Luke Skywalker</strong>, <strong>Darth Vader</strong>, <strong>Leia Organa</strong>
-        e <strong>Obi-Wan Kenobi</strong>, em batalhas que vão muito além das estrelas.
-      </p>
-      <p>
-        Mais do que uma série de filmes, <strong>Star Wars</strong> se tornou um universo completo, com séries, jogos, livros e produções
-        que continuam expandindo suas histórias. Seu impacto cultural atravessa gerações, influenciando o cinema, a tecnologia e o imaginário
-        popular ao transmitir mensagens de <strong>esperança, coragem e equilíbrio</strong> entre luz e escuridão.
-      </p>
-          <div id="slider">
-      <div class="slide">
-        <h1>inicio</h1>
-        <img src="../assets/fundoS.png" >
+
+    <div class="sobre-conteudo">
+
+      <!-- SLIDER -->
+      <div id="slider">
+        <div class="slide active">
+          <h1>Início</h1>
+          <img src="../assets/fundoS.png" />
+        </div>
+        <div class="slide">
+          <h1>Jedis</h1>
+          <img src="../assets/ThreeJedi.webp" />
+        </div>
+        <div class="slide">
+          <h1>Yoda</h1>
+          <img src="../assets/pg-28-yoda.avif" />
+        </div>
+        <div class="slide">
+          <h1>Darth Vader</h1>
+          <img src="../assets/darth-vader-main_4560aff7.jpeg" />
+        </div>
+        <div class="slide">
+          <h1>Stormtroopers</h1>
+          <img src="../assets/storm-troopers.webp" />
+        </div>
+        <div class="slide">
+          <h1>Lutas</h1>
+          <img src="../assets/star-wars-icegif-17.gif" />
+        </div>
       </div>
-      <div class="slide">
-        <h1>Jedis</h1>
-        <img src="../assets/ThreeJedi.webp" >
+
+      <!-- TEXTO -->
+      <div class="texto-sobre">
+        <p>
+          <strong>Star Wars</strong> é uma das sagas mais marcantes da história
+          do cinema, criada por <strong>George Lucas</strong> em 1977. Ambientada
+          <em>“numa galáxia muito, muito distante”</em>, a franquia mistura
+          ficção científica, fantasia e aventura.
+        </p>
+
+        <p>
+          Ao longo dos filmes, acompanhamos personagens lendários como
+          <strong>Luke</strong>, <strong>Leia</strong>,
+          <strong>Darth Vader</strong>, e <strong>Obi-Wan</strong>. O universo
+          cresceu com séries, jogos e livros, mantendo viva sua mensagem de
+          esperança e equilíbrio entre luz e escuridão.
+        </p>
       </div>
-      <div class="slide">
-        <h1>Yoda</h1>
-        <img src="../assets/pg-28-yoda.avif" >
-      </div>
-      <div class="slide">
-        <h1>Darth Vader</h1>
-        <img src="../assets/darth-vader-main_4560aff7.jpeg" >
-      </div>
-     <div class="slide">
-        <h1>stormtroope</h1>
-        <img src="../assets/storm-troopers.webp" >
-      </div>
-      <div class="slide">
-        <h1>lutas</h1>
-        <img src="../assets/star-wars-icegif-17.gif">
-      </div>
-    </div>
-  
+
     </div>
   </section>
 
+  <!-- ===== LINHA DO TEMPO ===== -->
+  <section class="linha-tempo-horizontal" id="linhaTempo">
+    <h2>Minha Jornada com Star Wars</h2>
+
+    <div class="timeline-horizontal-container">
+
+      <div class="timeline-horizontal-item">
+        <div class="timeline-dot"></div>
+        <img src="../assets/darth-vader-main_4560aff7.jpeg" class="timeline-img" alt="Infância" />
+        <h3>Infância</h3>
+        <p>Meu tio me apresentou Star Wars, e esse universo virou meu refúgio.</p>
+      </div>
+
+      <div class="timeline-horizontal-item">
+        <div class="timeline-dot"></div>
+        <img src="../assets/storm-troopers.webp" class="timeline-img" alt="Pré-adolescência" />
+        <h3>Pré-adolescência</h3>
+        <p>Ganhei minhas primeiras naves e percebi a importância dessa galáxia.</p>
+      </div>
+
+      <div class="timeline-horizontal-item">
+        <div class="timeline-dot"></div>
+        <img src="../assets/Tropa.jpeg" class="timeline-img" alt="Adolescência" />
+        <h3>Adolescência</h3>
+        <p>Star Wars me ajudou em momentos difíceis, trazendo força e imaginação.</p>
+      </div>
+
+      <div class="timeline-horizontal-item">
+        <div class="timeline-dot"></div>
+        <img src="../assets/Yoda.jpeg" class="timeline-img" alt="Hoje" />
+        <h3>Hoje em dia</h3>
+        <p>Star Wars faz parte da minha história e da Força que me acompanha.</p>
+      </div>
+
+    </div>
+  </section>
+  
+
   <script src="../js/index.js"></script>
+
 </body>
 </html>

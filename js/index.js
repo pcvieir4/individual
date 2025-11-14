@@ -11,4 +11,5 @@ function scrollToSection(id) {
     currentSlide = (currentSlide+1)%slides.length;
     slides[currentSlide].className="slide active";
   }
+
   
