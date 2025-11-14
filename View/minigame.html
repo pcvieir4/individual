@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Jogo Star Wars</title>
+  <link rel="stylesheet" href="../style/star.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🌌 Mini Jogo Star Wars</h1>
+    <p class="desc">Controle a Millennium Falcon e destrua os TIE Fighters!</p>
+
+    <div id="campoBatalha">
+      <img id="falcon" src="https://i.ibb.co/2nS4V4F/xwing-blue.png" class="falcon">
+      <img id="tie" src="https://i.ibb.co/tZbSgdy/tie-fighter.png" class="tie">
+    </div>
+
+    <div class="painel">
+      <p><strong>Pontuação:</strong> <span id="pontos">0</span></p>
+      <p><strong>Vidas:</strong> <span id="vidas">3</span></p>
+    </div>
+
+    <button onclick="atacar()">Atacar 🚀</button>
+    <button onclick="reiniciar()">Reiniciar 🔁</button>
+
+    <p id="mensagem"></p>
+  </div>
+
+  <script src="../js/star.js"></script>
+</body>
+</html>

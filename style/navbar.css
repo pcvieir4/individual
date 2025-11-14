@@ -1,0 +1,81 @@
+/* ===== NAVBAR ===== */
+.navbar {
+  font-family: "Inter", sans-serif;
+  color: var(--text-navbar-color, #fff);
+  background-color: var(--bg-card, rgba(0, 0, 0, 0.7));
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+}
+
+/* ===== Container da Navbar ===== */
+.container_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Logo ===== */
+#logo_nav img {
+  width: 120px;
+  cursor: pointer;
+}
+
+/* ===== Lista de links ===== */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.ul_nav {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.ul_nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.ul_nav li a:hover {
+  color: #ffe81f;
+}
+
+/* ===== Página atual em destaque ===== */
+#page_atual {
+  color: #ffe81f;
+  font-weight: bold;
+}
+
+/* ===== Botão de login ===== */
+.bt_nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  background-color: transparent;
+  border: 1.5px solid #ffe81f;
+  color: #ffe81f;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ffe81f;
+  color: black;
+  transform: scale(1.05);
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Wars</title>
+
+  <link rel="stylesheet" href="../style/navbar.css">
+  <link rel="stylesheet" href="../style/home.css">
+  <link href="https://fonts.cdnfonts.com/css/star-jedi" rel="stylesheet">
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container_nav">
+      <div id="logo_nav">
+        <a href="#inicio"><img src="../assets/starwars - Editado 1.svg" alt="Logo Star Wars" width="120"></a>
+      </div>
+
+      <nav class="nav">
+        <ul class="ul_nav">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="calculadora.html">Calculadora</a></li>
+        </ul>
+
+        <ul class="bt_nav">
+          <li><button class="button" onclick="window.location.href='login.html'">Entrar</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+ 
+   
+  <section class="inicio" id="inicio">
+    <div id="stars"></div>
+    
+    
+    <div class="logo">
+      
+      <img src="../assets/png-transparent-star-wars-hd-logo.png" alt="Star Wars Logo">
+    </div>
+    
+
+    <div class="intro-text">
+      
+      <h1>Bem-vindo ao Universo Star Wars</h1>
+      <p>Explore uma galáxia muito, muito distante...</p>
+      <button onclick="scrollToSection('sobre')">Conheça mais </button>
+    </div>
+  </section>
+
+  
+  <section class="sobre-starwars" id="sobre">
+    <h2>Sobre <span>Star Wars</span></h2>
+    <div class="texto-sobre">
+      <p>
+        <strong>Star Wars</strong> é uma das sagas mais marcantes da história do cinema, criada por <strong>George Lucas</strong> em 1977.
+        Ambientada <em>“numa galáxia muito, muito distante”</em>, a franquia mistura ficção científica, fantasia e aventura em uma narrativa
+        sobre a luta entre o bem e o mal, representados pelos <strong>Jedi</strong> e pelos <strong>Sith</strong>. Ao longo dos filmes,
+        acompanhamos heróis e vilões lendários como <strong>Luke Skywalker</strong>, <strong>Darth Vader</strong>, <strong>Leia Organa</strong>
+        e <strong>Obi-Wan Kenobi</strong>, em batalhas que vão muito além das estrelas.
+      </p>
+      <p>
+        Mais do que uma série de filmes, <strong>Star Wars</strong> se tornou um universo completo, com séries, jogos, livros e produções
+        que continuam expandindo suas histórias. Seu impacto cultural atravessa gerações, influenciando o cinema, a tecnologia e o imaginário
+        popular ao transmitir mensagens de <strong>esperança, coragem e equilíbrio</strong> entre luz e escuridão.
+      </p>
+          <div id="slider">
+      <div class="slide">
+        <h1>inicio</h1>
+        <img src="../assets/fundoS.png" >
+      </div>
+      <div class="slide">
+        <h1>Jedis</h1>
+        <img src="../assets/ThreeJedi.webp" >
+      </div>
+      <div class="slide">
+        <h1>Yoda</h1>
+        <img src="../assets/pg-28-yoda.avif" >
+      </div>
+      <div class="slide">
+        <h1>Darth Vader</h1>
+        <img src="../assets/darth-vader-main_4560aff7.jpeg" >
+      </div>
+     <div class="slide">
+        <h1>stormtroope</h1>
+        <img src="../assets/storm-troopers.webp" >
+      </div>
+      <div class="slide">
+        <h1>lutas</h1>
+        <img src="../assets/star-wars-icegif-17.gif">
+      </div>
+    </div>
+  
+    </div>
+  </section>
+
+  <script src="../js/index.js"></script>
+</body>
+</html>

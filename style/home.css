@@ -1,0 +1,140 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Star';
+  src: url('../assets/Starjedi.ttf') format('truetype');
+}
+body {
+  margin: 0;
+  background-color: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+
+.inicio {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
+@keyframes moveStars {
+  from { background-position-y: 0; }
+  to { background-position-y: -800px; }
+}
+
+.logo {
+  position: relative;
+  z-index: 1;
+}
+
+.logo img {
+  width: 420px;
+  max-width: 80vw;
+  opacity: 1;
+}
+
+
+.intro-text {
+  position: absolute;
+  bottom: 80px;
+  text-align: center;
+  color: #ffe81f;
+  z-index: 2;
+}
+
+.intro-text h1 {
+  font-size: 36px;
+  letter-spacing: 0.4rem;
+  margin-bottom: 8px;
+  font-family: 'Star';
+}
+
+.intro-text p {
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.8;
+  font-family: 'Star';
+  
+}
+
+.intro-text button {
+  margin-top: 10px;
+  background: transparent;
+  border: 1.5px solid #ffe81f;
+  color: #ffe81f;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Star';
+}
+
+.intro-text button:hover {
+  background: #ffe81f;
+  color: black;
+  font-family: 'Star';
+}
+
+
+.sobre-starwars {
+  position: relative;
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 0;
+  text-align: justify;
+  color: #f5f5f5;
+  font-family: 'Star';
+}
+
+.sobre-starwars h2 {
+  font-family: 'Star';
+  text-align: center;
+  font-size: 40px;
+  color: #ffe81f;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  
+}
+
+.sobre-starwars h2 span {
+  color: #ffffff;
+  font-family: 'Star';
+}
+
+.texto-sobre {
+  font-family: 'Inter', sans-serif;
+  color: #e8e8e8;
+  line-height: 1.8;
+  font-size: 15px;
+  font-family: 'Star';
+}
+ #slider {
+      width: 80%;
+    }
+    
+    .slide {
+      width: 80%;
+      display: none;
+      position: relative;
+    }
+    
+    .slide img {
+      width: 80%;
+      height: 80%;
+    }
+    
+    .slide.active {
+      display: block;
+    }
+  
