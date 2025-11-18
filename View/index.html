@@ -4,51 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Star Wars</title>
-
-  <link rel="stylesheet" href="../style/navbar.css" />
   <link rel="stylesheet" href="../style/home.css" />
-  <link href="https://fonts.cdnfonts.com/css/star-jedi" rel="stylesheet" />
 </head>
+<body class="sith">
 
-<body>
+  <div id="stars"></div>
 
-  <!-- ===== NAVBAR ===== -->
   <header class="navbar">
     <div class="container_nav">
       <div id="logo_nav">
         <a href="#inicio">
-          <img src="../assets/starwars - Editado 1.svg" alt="Logo Star Wars" width="120" />
+          <img src="../assets/starwars - Editado 1.svg" width="120" />
         </a>
       </div>
-
-      <nav class="nav">
-        <ul class="ul_nav">
-          <li><a href="#inicio">Início</a></li>
+      <nav>
+        <ul>
+          <li class="active"><a href="#inicio">Home</a></li>
           <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#linhaTempo">Minha história</a></li>
-          <li><a href="#contato">Contato</a></li>
-          <li><a href="calculadora.html">Calculadora</a></li>
-        </ul>
-
-        <ul class="bt_nav">
-          <li>
-            <button class="button" onclick="window.location.href='login.html'">
-              Entrar
-            </button>
-          </li>
+          <li><a href="#linhaTempo">Linha do tempo</a></li>
+          <li><a href="#licoes">Lado Sombrio</a></li>
+          <li><a href="#galeria">Galeria</a></li>
         </ul>
       </nav>
+      <button id="themeToggle" class="theme-toggle">Modo Jedi</button>
+      <button></button>
     </div>
   </header>
 
-  <!-- ===== TELA INICIAL ===== -->
-  <section class="inicio" id="inicio">
-    <div id="stars"></div>
 
+ 
+
+  <section class="inicio reveal" id="inicio">
     <div class="logo">
-      <img src="../assets/png-transparent-star-wars-hd-logo.png" alt="Star Wars Logo" />
+      <img src="../assets/png-transparent-star-wars-hd-logo.png" />
     </div>
-
     <div class="intro-text">
       <h1>Bem-vindo ao Universo Star Wars</h1>
       <p>Explore uma galáxia muito, muito distante...</p>
@@ -56,13 +45,10 @@
     </div>
   </section>
 
-  <!-- ===== SOBRE STAR WARS ===== -->
-  <section class="sobre-starwars" id="sobre">
+  <section class="sobre-starwars reveal" id="sobre">
     <h2>Sobre <span>Star Wars</span></h2>
 
     <div class="sobre-conteudo">
-
-      <!-- SLIDER -->
       <div id="slider">
         <div class="slide active">
           <h1>Início</h1>
@@ -78,78 +64,180 @@
         </div>
         <div class="slide">
           <h1>Darth Vader</h1>
-          <img src="../assets/darth-vader-main_4560aff7.jpeg" />
+          <img src="../assets/maria-ten-b7Hr2YK-FuI-unsplash.jpg" />
         </div>
         <div class="slide">
           <h1>Stormtroopers</h1>
           <img src="../assets/storm-troopers.webp" />
         </div>
-        <div class="slide">
-          <h1>Lutas</h1>
-          <img src="../assets/star-wars-icegif-17.gif" />
-        </div>
       </div>
 
-      <!-- TEXTO -->
       <div class="texto-sobre">
         <p>
-          <strong>Star Wars</strong> é uma das sagas mais marcantes da história
-          do cinema, criada por <strong>George Lucas</strong> em 1977. Ambientada
-          <em>“numa galáxia muito, muito distante”</em>, a franquia mistura
-          ficção científica, fantasia e aventura.
+          Star Wars é uma das sagas mais marcantes da história do cinema. Criada por
+          George Lucas em 1977, mistura ficção científica, fantasia e aventura.
         </p>
-
         <p>
-          Ao longo dos filmes, acompanhamos personagens lendários como
-          <strong>Luke</strong>, <strong>Leia</strong>,
-          <strong>Darth Vader</strong>, e <strong>Obi-Wan</strong>. O universo
-          cresceu com séries, jogos e livros, mantendo viva sua mensagem de
-          esperança e equilíbrio entre luz e escuridão.
+          Com personagens lendários como Luke, Leia, Darth Vader e Yoda, a franquia
+          se tornou um símbolo cultural e emocional para milhões de fãs pelo mundo.
         </p>
       </div>
-
     </div>
   </section>
 
-  <!-- ===== LINHA DO TEMPO ===== -->
-  <section class="linha-tempo-horizontal" id="linhaTempo">
+  <section class="linha-tempo-horizontal reveal" id="linhaTempo">
     <h2>Minha Jornada com Star Wars</h2>
 
     <div class="timeline-horizontal-container">
 
       <div class="timeline-horizontal-item">
-        <div class="timeline-dot"></div>
-        <img src="../assets/darth-vader-main_4560aff7.jpeg" class="timeline-img" alt="Infância" />
+        <img src="../assets/infancia.jpg" class="timeline-img" />
         <h3>Infância</h3>
-        <p>Meu tio me apresentou Star Wars, e esse universo virou meu refúgio.</p>
+        <p>Star Wars foi meu refúgio e minha primeira conexão com a imaginação.</p>
       </div>
 
       <div class="timeline-horizontal-item">
-        <div class="timeline-dot"></div>
-        <img src="../assets/storm-troopers.webp" class="timeline-img" alt="Pré-adolescência" />
+        <img src="../assets/gab.jpg" class="timeline-img" />
         <h3>Pré-adolescência</h3>
-        <p>Ganhei minhas primeiras naves e percebi a importância dessa galáxia.</p>
+        <p>Ganhei minhas primeiras naves e me apaixonei por essa galáxia distante.</p>
       </div>
 
       <div class="timeline-horizontal-item">
-        <div class="timeline-dot"></div>
-        <img src="../assets/Tropa.jpeg" class="timeline-img" alt="Adolescência" />
+        <img src="assets/adolescencia.jpg" class="timeline-img" />
         <h3>Adolescência</h3>
-        <p>Star Wars me ajudou em momentos difíceis, trazendo força e imaginação.</p>
+        <p>Os filmes me ajudaram a enfrentar momentos difíceis e acreditar na esperança.</p>
       </div>
 
       <div class="timeline-horizontal-item">
-        <div class="timeline-dot"></div>
-        <img src="../assets/Yoda.jpeg" class="timeline-img" alt="Hoje" />
+        <img src="../assets/HojeEmDIa.jpg" class="timeline-img" />
         <h3>Hoje em dia</h3>
-        <p>Star Wars faz parte da minha história e da Força que me acompanha.</p>
+        <p>A Força continua fazendo parte da minha história e dos meus sonhos.</p>
       </div>
 
     </div>
   </section>
-  
+
+  <section class="licoes reveal" id="licoes">
+    <h2>Frases do Lado Sombrio</h2>
+    <button id="vaderButton" class="vader-button">Ativar respiração do Vader</button>
+
+    <div class="container_licoes">
+      <div class="cards">
+
+        <div class="card-frase">
+          <h3>O medo conduz</h3>
+          <p>O medo revela aquilo que tentamos esconder. Enfrentá-lo transforma insegurança em poder.</p>
+        </div>
+
+        <div class="card-frase">
+          <h3>A escuridão é honesta</h3>
+          <p>A escuridão mostra a verdade sem máscaras, sem ilusões e sem desculpas.</p>
+        </div>
+
+        <div class="card-frase">
+          <h3>Poder exige sacrifício</h3>
+          <p>Nada grandioso é conquistado sem perder algo no processo. O lado sombrio cobra, mas fortalece.</p>
+        </div>
+
+        <div class="card-frase">
+          <h3>A queda nos molda</h3>
+          <p>Cada falha é um novo capítulo. Cada queda constrói um eu mais forte e consciente.</p>
+        </div>
+
+        <div class="card-frase">
+          <h3>Conflito gera força</h3>
+          <p>A verdadeira força nasce do caos interno. A paz constante não cria guerreiros.</p>
+        </div>
+
+        <div class="card-frase">
+          <h3>A tentação é real</h3>
+          <p>O poder seduz, oferece controle, mas toda promessa tem um preço oculto.</p>
+        </div>
+
+        <div class="card-frase">
+          <h3>Mesmo na escuridão há luz</h3>
+          <p>Anakin provou que mesmo após o abismo, a redenção ainda existe para quem enxerga a luz.</p>
+        </div>
+
+        <div class="card-frase">
+          <h3>Aceite seu verdadeiro eu</h3>
+          <p>O lado sombrio não exige perfeição. Exige sinceridade sobre quem você realmente é.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="galeria reveal" id="galeria">
+    <h2>Galeria da Galáxia</h2>
+    <div class="galeria-grid">
+     <div class="galeria-item">
+  <img src="assets/luke.jpg" loading="lazy" alt="Luke Skywalker" /> 
+  <div class="galeria-overlay"><span>Luke Skywalker</span></div>
+</div>
+      <div class="galeria-item">
+        <img src="assets/leia.jpg" loading="lazy" alt="Princesa Leia" />
+        <div class="galeria-overlay"><span>Princesa Leia</span></div>
+      </div>
+      <div class="galeria-item">
+        <img src="assets/obiwan.jpg" />
+        <div class="galeria-overlay"><span>Obi-Wan Kenobi</span></div>
+      </div>
+      <div class="galeria-item">
+        <img src="assets/maul.jpg" />
+        <div class="galeria-overlay"><span>Darth Maul</span></div>
+      </div>
+      <div class="galeria-item">
+        <img src="assets/falcon.jpg" />
+        <div class="galeria-overlay"><span>Millennium Falcon</span></div>
+      </div>
+      <div class="galeria-item">
+        <img src="assets/deathstar.jpg" />
+        <div class="galeria-overlay"><span>Estrela da Morte</span></div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <h3>Star Wars</h3>
+        <p>Uma galáxia muito, muito distante sempre presente na minha história.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#linhaTempo">Linha do tempo</a></li>
+          <li><a href="#licoes">Lado Sombrio</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contato</h3>
+        <p>Email: pedro.starwars@galaxia.com</p>
+        <p>Instagram: @pedro_cardoso</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>Que a Força esteja com você. Sempre.</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top">↑</button>
+
+  <audio id="vaderAudio">
+    <source src="../assets/audio/respiração.mp3" type="audio/mpeg" />
+  </audio>
 
   <script src="../js/index.js"></script>
-
 </body>
 </html>
