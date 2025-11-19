@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Star Wars</title>
+    <link rel="stylesheet" href="../style/login.css" />
+  </head>
+
+  <body>
+    <div class="container-auth">
+      <!-- LADO YODA -->
+      <div
+        class="image-side"
+        style="background-image: url('../assets/ᝰ_ᐟ\ \ 𝐃𝐀𝐑𝐓𝐇\ 𝐕𝐀𝐃𝐄𝐑\ &\ \ 𝐎𝐁𝐈\ 𝐖𝐀𝐍\ 𝐊𝐄𝐍𝐎𝐁𝐈\ \ .ᐟᝰ_')"
+      ></div>
+
+      <!-- FORMULÁRIO -->
+      <div class="form-side">
+        <h1>LOGIN</h1>
+
+        <form>
+          <input type="text" id="usuario" placeholder="Usuário" />
+          <input type="password" id="senha" placeholder="Senha" />
+
+          <p>Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+
+          <button type="button" onclick="fazerLogin()">Entrar</button>
+
+          <p id="erroLogin" class="erro"></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="../js/login.js"></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro | Star Wars</title>
+    <link rel="stylesheet" href="../style/login.css" />
+  </head>

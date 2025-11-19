@@ -202,7 +202,7 @@ nav ul li.active a::after {
 
 .texto-sobre {
   width: 50%;
-  font-size: 15px;
+  font-size: 20px;
   color: #e8e8e8;
   line-height: 1.8;
   font-family: Arial, sans-serif;
@@ -228,7 +228,7 @@ nav ul li.active a::after {
 
 .slide img {
   width: 100%;
-  height: 280px;
+  height: 420px;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -258,7 +258,7 @@ nav ul li.active a::after {
 
 .timeline-horizontal-item .timeline-img {
   width: 100%;
-  height: 160px;
+  height: 360px;
   object-fit: cover;
   border-radius: 8px;
   border: 2px solid #ffe81f;
@@ -359,7 +359,7 @@ nav ul li.active a::after {
 
 .galeria-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 20px;
 }
 

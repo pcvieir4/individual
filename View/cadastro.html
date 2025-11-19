@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro | Star Wars</title>
+    <link rel="stylesheet" href="../style/login.css" />
+  </head>
+
+  <body>
+    <div class="container-auth">
+      <!-- LADO DARTH VADER -->
+      <div
+        class="image-side"
+        style="background-image: url('../assets/In\ their\ final\ duel\ \(Obi-Wan\ Kenobi\ series\)….jpeg')"
+      ></div>
+
+      <!-- FORMULÁRIO -->
+      <div class="form-side">
+        <h1>CADASTRO</h1>
+
+        <form>
+          <input type="text" id="nome" placeholder="Nome completo" />
+          <input type="email" id="email" placeholder="Email" />
+          <input type="password" id="senha" placeholder="Senha" />
+          <input type="password" id="confirmar" placeholder="Confirmar senha" />
+
+          <p>Já tem conta? <a href="login.html">Faça login</a></p>
+
+          <button type="button" onclick="cadastrar()">Cadastrar</button>
+
+          <p id="erroCadastro" class="erro"></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="../js/cadastro.js"></script>
+  </body>
+</html>
