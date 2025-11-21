@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* MENU LATERAL */
+
+.lateral-menu {
+  background: black;
+  color: white;
+  width: 250px;
+  height: 100vh;
+  padding: 20px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 30px;
+}
+
+.menu-items li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.menu-items li img {
+  margin-bottom: 8px;
+}
+
+/* ÁREA PRINCIPAL */
+
+.content {
+  background-color: #f5f6fa;
+  width: 100%;
+  padding: 40px;
+}
+
+/* CARDS */
+
+.cards-header {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  height: 132px;
+  width: 240px;
+
+  display: flex;
+  align-items: center;
+}
+
+.card-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-info h2 {
+  font-size: 42px;
+  font-weight: bold;
+  color: #ffbf00;
+}
+
+.card-info p {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
