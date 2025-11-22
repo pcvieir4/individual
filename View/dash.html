@@ -3,15 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/dash.css" />
+    <link rel="stylesheet" href="../style/dash.css" />
     <title>Dashboard</title>
   </head>
 
   <body>
     <div class="container">
+
       <!-- MENU LATERAL -->
-      <aside class="lateral-menu">
-        <img src="../assets/icon/logo.png" class="logo" />
+      <div class="lateral-menu">
+        <div class="nav_logo">
+          <a href="index.html">
+            <img src="../assets/icon/logo.png" class="logo" />
+          </a>
+        </div>
 
         <ul class="menu-items">
           <li>
@@ -20,27 +25,28 @@
           </li>
           <li>
             <img src="../assets/icon/personagens.svg" />
-            <p>Personagem</p>
+            <p>Pontuação</p>
           </li>
           <li>
             <img src="../assets/icon/planetas.svg" />
-            <p>Planetas e luas</p>
+            <p>Tempos</p>
           </li>
           <li>
             <img src="../assets/icon/nave.svg" />
-            <p>Naves espaciais</p>
+            <p>Total de Tentativas</p>
           </li>
         </ul>
-      </aside>
+      </div>
 
       <!-- CONTEÚDO PRINCIPAL -->
       <main class="content">
+
         <!-- LINHA DE CARDS -->
         <div class="cards-header">
           <div class="card card-small">
             <div class="card-content">
               <div class="card-info">
-                <p>Personagens</p>
+                <p>Pontuação</p>
                 <h2>10</h2>
               </div>
               <img src="../assets/icon/personagens-black.svg" />
@@ -50,7 +56,7 @@
           <div class="card card-small">
             <div class="card-content">
               <div class="card-info">
-                <p>Luas</p>
+                <p>Tempo max</p>
                 <h2>8</h2>
               </div>
               <img src="../assets/icon/luas-black.svg" />
@@ -60,7 +66,7 @@
           <div class="card card-small">
             <div class="card-content">
               <div class="card-info">
-                <p>Planetas</p>
+                <p>Tempo min</p>
                 <h2>24</h2>
               </div>
               <img src="../assets/icon/planetas-black.svg" />
@@ -70,13 +76,51 @@
           <div class="card card-small">
             <div class="card-content">
               <div class="card-info">
-                <p>Naves</p>
+                <p>Tentativas</p>
                 <h2>22</h2>
               </div>
               <img src="../assets/icon/nave-black.svg" />
             </div>
           </div>
         </div>
+
+        <!-- GRÁFICO + RANKING - LADO A LADO -->
+        <div class="linha-conteudo">
+
+          <!-- CARD DO GRÁFICO -->
+          <div class="radar-card">
+            <canvas id="graficoQuiz"></canvas>
+          </div>
+
+          <!-- CARD DO RANKING -->
+          <div class="ranking-card">
+            <h3>Ranking Jedis</h3>
+            <ul class="ranking-list">
+              <li>
+                <span class="posicao ouro">1º</span>
+                <p class="nome">Pedro Vieira</p>
+                <span class="pontos">980 pts</span>
+              </li>
+
+              <li>
+                <span class="posicao prata">2º</span>
+                <p class="nome">Lucas Quevedo</p>
+                <span class="pontos">870 pts</span>
+              </li>
+
+              <li>
+                <span class="posicao bronze">3º</span>
+                <p class="nome">Samara</p>
+                <span class="pontos">820 pts</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="../js/dash.js"></script>
+
       </main>
     </div>
   </body>

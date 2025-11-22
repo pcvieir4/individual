@@ -1,90 +1,102 @@
-// Dados dos filmes (pode trocar pelos que quiser)
-const filmes = [
-  { titulo: "A New Hope", data: "25/05/1977", diretor: "George Lucas", ep: 4 },
-  {
-    titulo: "Return of the Jedi",
-    data: "25/05/1983",
-    diretor: "Richard Marquand",
-    ep: 6,
-  },
-  {
-    titulo: "The Phantom Menace",
-    data: "19/05/1999",
-    diretor: "George Lucas",
-    ep: 1,
-  },
-  {
-    titulo: "Attack of the Clones",
-    data: "16/05/2002",
-    diretor: "George Lucas",
-    ep: 2,
-  },
-  {
-    titulo: "Revenge of the Sith",
-    data: "19/05/2005",
-    diretor: "George Lucas",
-    ep: 3,
-  },
-  {
-    titulo: "The Force Awakens",
-    data: "18/12/2015",
-    diretor: "J. J. Abrams",
-    ep: 7,
-  },
-];
-
-// Preencher tabela
-const tbody = document.getElementById("tbody-filmes");
-filmes.forEach((filme) => {
-  const tr = document.createElement("tr");
-
-  tr.innerHTML = `
-    <td>${filme.titulo}</td>
-    <td>${filme.data}</td>
-    <td>${filme.diretor}</td>
-    <td>${filme.ep}</td>
-  `;
-
-  tbody.appendChild(tr);
-});
-
-// Gráfico de pizza com Chart.js
-const ctx = document.getElementById("chartBilheteria").getContext("2d");
+const ctx = document.getElementById("graficoQuiz");
 
 new Chart(ctx, {
-  type: "pie",
+  type: "radar",
   data: {
     labels: [
-      "The Force Awakens",
-      "The Last Jedi",
-      "The Rise of Skywalker",
-      "Rogue One",
-      "Revenge of the Sith",
+      "Personagens",
+      "Naves",
+      "Planetas",
+      "A Força",
+      "Cronologia"
     ],
+
     datasets: [
       {
-        data: [2068, 1333, 1074, 1056, 868], // valores fictícios de bilheteria
-        backgroundColor: [
-          "#0ea5e9",
-          "#f97316",
-          "#22c55e",
-          "#eab308",
-          "#6366f1",
-        ],
+        label: "Nível de Conhecimento",
+        data: [70, 40, 55, 90, 35], // ← valores de exemplo (% de acertos)
+        fill: true,
+        backgroundColor: "rgba(255, 193, 7, 0.25)",
+        borderColor: "rgba(255, 193, 7, 1)",
+        pointBackgroundColor: "#ffbf00",
+        pointBorderColor: "#fff",
+        pointRadius: 6,
+        pointHoverRadius: 10,
+        borderWidth: 2,
       },
     ],
   },
+
   options: {
+    responsive: true,
+    maintainAspectRatio: false,
+
     plugins: {
       legend: {
-        position: "bottom",
+        display: true,
         labels: {
-          boxWidth: 14,
-          font: {
-            size: 11,
-          },
+          font: { size: 15, weight: "bold" },
+          color: "#000",
         },
+      },
+    },
+
+    scales: {
+      r: {
+        min: 0,
+        max: 100, // porcentagem de acertos
+        ticks: {
+          stepSize: 20,
+          backdropColor: "transparent",
+          color: "#000",
+          font: { size: 12 },
+        },
+        pointLabels: {
+          color: "#000",
+          font: { size: 15, weight: "bold" },
+        },
+        grid: { color: "rgba(0,0,0,0.15)" },
+        angleLines: { color: "rgba(0,0,0,0.25)" }
       },
     },
   },
 });
+// Exemplo de jogadores (substitua pelos seus dados reais)
+const jogadores = [
+  { nome: "Pedro Vieira", pontos: 980 },
+  { nome: "Lucas Quevedo", pontos: 870 },
+  { nome: "Samara", pontos: 820 },
+  { nome: "Arthur", pontos: 760 },
+  { nome: "Ana Silva", pontos: 700 },
+  { nome: "Gleison", pontos: 650 },
+  { nome: "Erick", pontos: 560 }
+];
+
+// Ordena do maior para o menor
+jogadores.sort((a, b) => b.pontos - a.pontos);
+
+// Mantém apenas o TOP 5
+const top5 = jogadores.slice(0, 5);
+
+// Seleciona a UL do ranking
+const lista = document.querySelector(".ranking-list");
+
+// Limpa o conteúdo existente
+lista.innerHTML = "";
+
+// Insere automaticamente os 5 melhores
+top5.forEach((jogador, index) => {
+  lista.innerHTML += `
+    <li>
+      <span class="posicao 
+        ${index === 0 ? "ouro" : index === 1 ? "prata" : index === 2 ? "bronze" : ""}
+      ">
+        ${index + 1}º
+      </span>
+
+      <p class="nome">${jogador.nome}</p>
+      <span class="pontos">${jogador.pontos} pts</span>
+    </li>
+  `;
+});
+
