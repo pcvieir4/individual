@@ -1,23 +1,33 @@
+// -------------------------
+// CARREGAR RESULTADO DO QUIZ DO LOCALSTORAGE
+// -------------------------
+const resultadoQuiz =
+  JSON.parse(localStorage.getItem("resultadoQuizStarWars")) || null;
+
+let radarData = [0, 0, 0, 0, 0]; // fallback vazio
+
+if (resultadoQuiz) {
+  radarData = [
+    resultadoQuiz.categorias.personagens,
+    resultadoQuiz.categorias.naves,
+    resultadoQuiz.categorias.planetas,
+    resultadoQuiz.categorias.forca,
+    resultadoQuiz.categorias.cronologia,
+  ];
+}
 const ctx = document.getElementById("graficoQuiz");
 
 new Chart(ctx, {
   type: "radar",
   data: {
-    labels: [
-      "Personagens",
-      "Naves",
-      "Planetas",
-      "A Força",
-      "Cronologia"
-    ],
-
+    labels: ["Personagens", "Naves", "Planetas", "A Força", "Cronologia"],
     datasets: [
       {
-        label: "Nível de Conhecimento",
-        data: [70, 40, 55, 90, 35], // ← valores de exemplo (% de acertos)
+        label: "Conhecimento por Categoria",
+        data: radarData,
         fill: true,
-        backgroundColor: "rgba(255, 193, 7, 0.25)",
-        borderColor: "rgba(255, 193, 7, 1)",
+        backgroundColor: "rgba(255, 191, 0, 0.25)",
+        borderColor: "rgba(255, 191, 0, 1)",
         pointBackgroundColor: "#ffbf00",
         pointBorderColor: "#fff",
         pointRadius: 6,
@@ -26,77 +36,63 @@ new Chart(ctx, {
       },
     ],
   },
-
   options: {
     responsive: true,
-    maintainAspectRatio: false,
-
-    plugins: {
-      legend: {
-        display: true,
-        labels: {
-          font: { size: 15, weight: "bold" },
-          color: "#000",
-        },
-      },
-    },
-
     scales: {
       r: {
         min: 0,
-        max: 100, // porcentagem de acertos
+        max: 100,
         ticks: {
           stepSize: 20,
-          backdropColor: "transparent",
           color: "#000",
-          font: { size: 12 },
         },
         pointLabels: {
           color: "#000",
-          font: { size: 15, weight: "bold" },
+          font: {
+            size: 15,
+            weight: "bold",
+          },
         },
         grid: { color: "rgba(0,0,0,0.15)" },
-        angleLines: { color: "rgba(0,0,0,0.25)" }
+        angleLines: { color: "rgba(0,0,0,0.25)" },
+      },
+    },
+    plugins: {
+      legend: {
+        labels: {
+          font: { size: 14, weight: "bold" },
+          color: "#000",
+        },
       },
     },
   },
 });
-// Exemplo de jogadores (substitua pelos seus dados reais)
-const jogadores = [
-  { nome: "Pedro Vieira", pontos: 980 },
-  { nome: "Lucas Quevedo", pontos: 870 },
-  { nome: "Samara", pontos: 820 },
-  { nome: "Arthur", pontos: 760 },
-  { nome: "Ana Silva", pontos: 700 },
-  { nome: "Gleison", pontos: 650 },
-  { nome: "Erick", pontos: 560 }
-];
 
-// Ordena do maior para o menor
-jogadores.sort((a, b) => b.pontos - a.pontos);
+// -------------------------
+// MONTAR RANKING TOP 5
+// -------------------------
+const rankingGeral =
+  JSON.parse(localStorage.getItem("rankingQuizStarWars")) || [];
 
-// Mantém apenas o TOP 5
-const top5 = jogadores.slice(0, 5);
+const rankingList = document.querySelector(".ranking-list");
+rankingList.innerHTML = "";
 
-// Seleciona a UL do ranking
-const lista = document.querySelector(".ranking-list");
-
-// Limpa o conteúdo existente
-lista.innerHTML = "";
-
-// Insere automaticamente os 5 melhores
-top5.forEach((jogador, index) => {
-  lista.innerHTML += `
+// Top 5
+rankingGeral.slice(0, 5).forEach((jogador, index) => {
+  rankingList.innerHTML += `
     <li>
-      <span class="posicao 
-        ${index === 0 ? "ouro" : index === 1 ? "prata" : index === 2 ? "bronze" : ""}
-      ">
-        ${index + 1}º
-      </span>
+      <span class="posicao ${
+        index === 0
+          ? "ouro"
+          : index === 1
+          ? "prata"
+          : index === 2
+          ? "bronze"
+          : ""
+      }">${index + 1}º</span>
 
       <p class="nome">${jogador.nome}</p>
       <span class="pontos">${jogador.pontos} pts</span>
     </li>
   `;
 });
-
